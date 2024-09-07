@@ -1,12 +1,20 @@
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import com.codeborne.selenide.Configuration;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class checkJUnitExample {
+public class CheckJUnitExample {
+
+    @BeforeAll
+    static void setup() {
+        Configuration.pageLoadStrategy = "eager";
+        Configuration.browserSize = "1366x768";
+    }
 
     @Test
-    void checkJUniteCodeExample() {
+    void checkJUniteCodeExampleTest() {
         open("https://github.com/");
         $("[placeholder='Search or jump to...']").click();
         $("#query-builder-test").setValue("Selenide").pressEnter();
