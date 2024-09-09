@@ -17,7 +17,8 @@ public class NavigateToEnterprizePage {
     void navigateToEnterprizePageTest() {
         open("https://github.com/");
         $x("//button[contains(text(), 'Solutions')]").hover();
-        sleep(5000);
+        $("a[href='https://github.com/enterprise']").click();
+        $("#hero-section-brand-heading").shouldHave(text("The AI-powered")).shouldHave(text("developer platform."));
     }
 }
 
