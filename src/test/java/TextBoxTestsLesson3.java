@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class TextBoxTests {
+public class TextBoxTestsLesson3 {
 
     @BeforeAll
     static void beforeAll() {
